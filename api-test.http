@@ -1,0 +1,52 @@
+### 1. LOGIN AS SUPER ADMIN (ដែលទើបបង្កើតស្វ័យប្រវត្តិ)
+# ប្រើ user: "admin" / pass: "123"
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "123"
+}
+
+###
+
+### 2. CREATE SCHOOL (ត្រូវការ Token)
+# ⚠️ ជំហាននេះ៖
+# 1. Run Login ខាងលើ
+# 2. Copy Token វែងៗ
+# 3. យកមក Paste ដាក់ជំនួស <PASTE_TOKEN_HERE>
+POST http://localhost:8080/api/v1/schools
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJTQ0hPT0xfQURNSU4iLCJpYXQiOjE3NjUzNTkyMDYsImV4cCI6MTc2NTQ0NTYwNn0.Dl3NepslweO49k3eGxhVrm9HUQIGmEUxfqUEiH6v9P4
+
+{
+  "name": "Hun Sen High School",
+  "code": "HS-001",
+  "address": "Phnom Penh",
+  "contactEmail": "info@hunsen.edu.kh",
+  "logoUrl": "https://example.com/logo.png"
+}
+
+###
+
+### 3. CREATE STUDENT (ត្រូវការ Token + SchoolID)
+# ⚠️ ជំហាននេះ៖
+# 1. យក Token ដដែលមកដាក់
+# 2. ទៅមើលក្នុង DBeaver យក ID របស់សាលា មកដាក់កន្លែង <PASTE_SCHOOL_ID>
+POST http://localhost:8080/api/students
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJTQ0hPT0xfQURNSU4iLCJpYXQiOjE3NjUzNTkyMDYsImV4cCI6MTc2NTQ0NTYwNn0.Dl3NepslweO49k3eGxhVrm9HUQIGmEUxfqUEiH6v9P4
+
+{
+  "username": "student_sok",
+  "password": "123",
+  "firstName": "Sok",
+  "lastName": "Sao",
+  "gender": "Male",
+  "dateOfBirth": "2005-01-01",
+  "schoolId": "c55ff643-6b96-4137-b0f3-756cab9feed0 "
+}
+### 4. GET ALL STUDENTS (មើលបញ្ជីសិស្ស)
+# ត្រូវការ Token (Admin ឬ Teacher ទើបមើលឃើញ)
+GET http://localhost:8080/api/students
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJTQ0hPT0xfQURNSU4iLCJpYXQiOjE3NjUzNTkyMDYsImV4cCI6MTc2NTQ0NTYwNn0.Dl3NepslweO49k3eGxhVrm9HUQIGmEUxfqUEiH6v9P4
