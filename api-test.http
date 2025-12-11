@@ -1,6 +1,6 @@
 ### 1. LOGIN AS SUPER ADMIN (ដែលទើបបង្កើតស្វ័យប្រវត្តិ)
 # ប្រើ user: "admin" / pass: "123"
-POST https://interesting-nearest-registered-interference.trycloudflare.com/api/auth/login
+POST   https://don-advice-always-penny.trycloudflare.com/api/auth/login
 Content-Type: application/json
 
 {
@@ -48,5 +48,5 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJTQ0hPT
 }
 ### 4. GET ALL STUDENTS (មើលបញ្ជីសិស្ស)
 # ត្រូវការ Token (Admin ឬ Teacher ទើបមើលឃើញ)
-GET https://doing-buyers-merely-verification.trycloudflare.com/api/students
+GET https://interesting-nearest-registered-interference.trycloudflare.com/api/students
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJTQ0hPT0xfQURNSU4iLCJpYXQiOjE3NjUzNTkyMDYsImV4cCI6MTc2NTQ0NTYwNn0.Dl3NepslweO49k3eGxhVrm9HUQIGmEUxfqUEiH6v9P4
