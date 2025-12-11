@@ -3,7 +3,6 @@ package com.school.schoolbackend.api;
 // 👇 បីបន្ទាត់នេះសំខាន់ណាស់! (Imports)
 import com.school.schoolbackend.api.dto.LoginDto;
 import com.school.schoolbackend.api.dto.LoginResponse;
-import com.school.schoolbackend.api.dto.RegisterDto;
 
 import com.school.schoolbackend.service.AuthService;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +19,7 @@ public class AuthController {
 
     // 1. REGISTER
     @PostMapping("/register")
-    public String register(@RequestBody RegisterDto dto) {
+    public String register(@RequestBody LoginDto.RegisterDto dto) {
         return service.register(dto);
     }
 

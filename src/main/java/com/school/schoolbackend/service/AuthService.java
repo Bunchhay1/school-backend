@@ -2,7 +2,6 @@ package com.school.schoolbackend.service;
 
 import com.school.schoolbackend.api.dto.LoginDto;
 import com.school.schoolbackend.api.dto.LoginResponse;
-import com.school.schoolbackend.api.dto.RegisterDto;
 import com.school.schoolbackend.config.JwtUtils;
 import com.school.schoolbackend.domain.User;
 import com.school.schoolbackend.repository.UserRepository;
@@ -23,7 +22,7 @@ public class AuthService {
     }
 
     // REGISTER (ដដែល)
-    public String register(RegisterDto dto) {
+    public String register(LoginDto.RegisterDto dto) {
         User user = new User();
         user.setUsername(dto.username());
         user.setPassword(passwordEncoder.encode(dto.password()));

@@ -1,6 +1,6 @@
 ### 1. LOGIN AS SUPER ADMIN (ដែលទើបបង្កើតស្វ័យប្រវត្តិ)
 # ប្រើ user: "admin" / pass: "123"
-POST http://localhost:8080/api/auth/login
+POST https://interesting-nearest-registered-interference.trycloudflare.com/api/auth/login
 Content-Type: application/json
 
 {
@@ -15,7 +15,7 @@ Content-Type: application/json
 # 1. Run Login ខាងលើ
 # 2. Copy Token វែងៗ
 # 3. យកមក Paste ដាក់ជំនួស <PASTE_TOKEN_HERE>
-POST http://localhost:8080/api/v1/schools
+POST https://doing-buyers-merely-verification.trycloudflare.com/api/auth/login
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJTQ0hPT0xfQURNSU4iLCJpYXQiOjE3NjUzNTkyMDYsImV4cCI6MTc2NTQ0NTYwNn0.Dl3NepslweO49k3eGxhVrm9HUQIGmEUxfqUEiH6v9P4
 
@@ -33,7 +33,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJTQ0hPT
 # ⚠️ ជំហាននេះ៖
 # 1. យក Token ដដែលមកដាក់
 # 2. ទៅមើលក្នុង DBeaver យក ID របស់សាលា មកដាក់កន្លែង <PASTE_SCHOOL_ID>
-POST http://localhost:8080/api/students
+POST https://doing-buyers-merely-verification.trycloudflare.com/api/students
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJTQ0hPT0xfQURNSU4iLCJpYXQiOjE3NjUzNTkyMDYsImV4cCI6MTc2NTQ0NTYwNn0.Dl3NepslweO49k3eGxhVrm9HUQIGmEUxfqUEiH6v9P4
 
@@ -48,5 +48,5 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJTQ0hPT
 }
 ### 4. GET ALL STUDENTS (មើលបញ្ជីសិស្ស)
 # ត្រូវការ Token (Admin ឬ Teacher ទើបមើលឃើញ)
-GET http://localhost:8080/api/students
+GET https://doing-buyers-merely-verification.trycloudflare.com/api/students
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJTQ0hPT0xfQURNSU4iLCJpYXQiOjE3NjUzNTkyMDYsImV4cCI6MTc2NTQ0NTYwNn0.Dl3NepslweO49k3eGxhVrm9HUQIGmEUxfqUEiH6v9P4
